@@ -29,7 +29,8 @@ namespace BlazAdmin.Docs
         {
             services.AddDbContext<DocsDbContext>(options =>
             {
-                options.UseInMemoryDatabase("docs");
+                //options.UseInMemoryDatabase("docs");
+                options.UseSqlite("Filename=./Identity.db");
             });
             services.AddBlazAdmin();
         }
